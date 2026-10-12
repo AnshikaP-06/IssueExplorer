@@ -1,0 +1,50 @@
+1. src/main/java/com/example/fixture/booking/BookingService.java (score=60.0208)
+   Method: cancelBooking (lines 33-40)
+   Matched terms: booking, bookingservice, bookingservice.java, cancel, cancelbooking, false, java, notice, required, reservation, return
+   Snippet (lines 33-40):
+     33 |     public boolean cancelBooking(String id, LocalDateTime requestedAt) {
+     34 |         var booking = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Unknown booking"));
+     35 |         if (!policy.canCancel(booking, requestedAt)) {
+     36 |             return false;
+     37 |         }
+     38 |         booking.cancel();
+     39 |         return true;
+     40 |     }
+   Permalink: unavailable for local folders (no GitHub commit recorded)
+2. src/main/java/com/example/fixture/booking/Booking.java (score=18.4474)
+   Method: isCancelled (lines 33-35)
+   Matched terms: already, booking, cancelled, java, reservation, return
+   Snippet (lines 33-35):
+     33 |     public boolean isCancelled() {
+     34 |         return cancelled;
+     35 |     }
+   Permalink: unavailable for local folders (no GitHub commit recorded)
+3. src/test/java/com/example/fixture/booking/BookingServiceTest.java (score=12.7333)
+   Method: respectsCancellationCutoff (lines 23-35)
+   Matched terms: 10, 24, booking, bookingservice, cancellation, cancelled, java, reservation, service
+   Snippet (lines 23-30):
+     23 |     @Test
+     24 |     void respectsCancellationCutoff() {
+     25 |         var repository = new BookingRepository();
+     26 |         var service = new BookingService(repository, new CancellationPolicy(24));
+     27 |         var start = LocalDateTime.of(2026, 10, 20, 10, 0);
+     28 |         service.createRecurringBooking("series", start, 2);
+     29 |         assertFalse(service.cancelBooking("series-0", start.minusHours(23)));
+     30 |         assertTrue(service.cancelBooking("series-0", start.minusHours(24)));
+   Permalink: unavailable for local folders (no GitHub commit recorded)
+4. src/main/java/com/example/fixture/booking/CancellationPolicy.java (score=11.0574)
+   Method: canCancel (lines 18-20)
+   Matched terms: booking, cancel, cancellation, deadline, java, return
+   Snippet (lines 18-20):
+     18 |     public boolean canCancel(Booking booking, LocalDateTime requestedAt) {
+     19 |         return !booking.isCancelled() && !requestedAt.isAfter(booking.getStart().minusHours(noticeHours));
+     20 |     }
+   Permalink: unavailable for local folders (no GitHub commit recorded)
+5. src/main/java/com/example/fixture/booking/BookingRepository.java (score=4.5748)
+   Method: save (lines 12-14)
+   Matched terms: booking, java, reservation
+   Snippet (lines 12-14):
+     12 |     public void save(Booking booking) {
+     13 |         bookings.put(booking.getId(), booking);
+     14 |     }
+   Permalink: unavailable for local folders (no GitHub commit recorded)

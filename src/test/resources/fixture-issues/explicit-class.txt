@@ -1,0 +1,7 @@
+Title: BookingService rejects cancellation at the notice deadline
+
+A reservation starting tomorrow at 10:00 should still be cancellable today
+at 10:00 when the required notice is 24 hours. BookingService.cancelBooking
+is the entry point. Please investigate BookingService.java and the rule used
+for the cancellation deadline. Cancelling an already cancelled reservation
+should still return false.

@@ -1,0 +1,6 @@
+Title: Downloaded income sheet has shifted columns
+
+When a customer label includes a comma, the downloaded monthly income sheet
+appears to put the amount in another column. Labels containing quotation marks
+can also look wrong. The on-screen total is correct. Investigate how the
+spreadsheet export formats customer labels and money values.

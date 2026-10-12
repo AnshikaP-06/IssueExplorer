@@ -1,0 +1,8 @@
+[
+  {
+    "issueUrl": "YOUR_REAL_GITHUB_ISSUE_URL",
+    "commitSha": "YOUR_FULL_COMMIT_SHA",
+    "relevantFiles": ["src/main/java/example/RelevantClass.java"],
+    "split": "dev"
+  }
+]

@@ -1,0 +1,8 @@
+Title: Sign-in fails with an account lockout exception
+
+After several unsuccessful sign-ins, a user sees an account lockout error.
+Check how failed attempts are recorded and when a successful attempt resets them.
+The captured stack trace is:
+
+java.lang.IllegalStateException: Account is locked
+    at com.example.fixture.accounts.AccountService.authenticate(AccountService.java:17)

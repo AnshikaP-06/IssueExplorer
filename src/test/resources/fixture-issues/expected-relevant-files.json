@@ -1,0 +1,35 @@
+[
+  {
+    "id": "explicit-class",
+    "category": "explicit-class",
+    "issueFile": "explicit-class.txt",
+    "relevantFiles": [
+      "src/main/java/com/example/fixture/booking/BookingService.java",
+      "src/main/java/com/example/fixture/booking/CancellationPolicy.java"
+    ]
+  },
+  {
+    "id": "stack-trace",
+    "category": "stack-trace",
+    "issueFile": "stack-trace.txt",
+    "relevantFiles": [
+      "src/main/java/com/example/fixture/accounts/AccountService.java",
+      "src/main/java/com/example/fixture/accounts/Account.java"
+    ]
+  },
+  {
+    "id": "vague",
+    "category": "vague",
+    "issueFile": "vague.txt",
+    "relevantFiles": [
+      "src/main/java/com/example/fixture/reporting/CsvReportWriter.java",
+      "src/main/java/com/example/fixture/reporting/ReportService.java"
+    ]
+  },
+  {
+    "id": "no-match",
+    "category": "no-match",
+    "issueFile": "no-match.txt",
+    "relevantFiles": []
+  }
+]

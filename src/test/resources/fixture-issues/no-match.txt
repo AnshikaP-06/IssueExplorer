@@ -1,0 +1,5 @@
+Title: Offline navigation loses the blue location dot
+
+The mobile map stops displaying the blue GPS location dot after airplane mode
+is enabled. Satellite positioning should remain available during offline
+navigation. The problem occurs while rotating the map and switching layers.
