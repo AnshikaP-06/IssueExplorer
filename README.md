@@ -235,15 +235,6 @@ Duplicate labels/predictions do not inflate scores. Unmatched issues and empty
 relevant-file lists score zero; empty splits print N/A. File paths match exactly,
 including case. Any processing failure stops evaluation without a complete summary.
 
-### Results (to be filled after real evaluation)
-
-| Split | Issues | Hit@5 | Recall@5 | MRR |
-|---|---|---|---|---|
-| Dev | TBD | TBD | TBD | TBD |
-| Heldout | TBD | TBD | TBD | TBD |
-
-Repository list, dataset version, labeling rules, chosen weights, coverage failures,
-evaluation date and tool revision: **TBD**.
 
 ## Tests and CI
 
